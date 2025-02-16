@@ -8,5 +8,7 @@ class CreateMovies < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+    add_index :movies, :title, unique: true
+    add_index :movies, :overview, unique: true
   end
 end
